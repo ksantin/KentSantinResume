@@ -41,7 +41,7 @@
         android:id="@+id/profExpButton"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:background="#0e66bd"
+        android:background="#6508fb"
         android:textColor="#e3e3e3"
         android:typeface="sans" />
 
@@ -52,7 +52,7 @@
         android:id="@+id/educationButton"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:background="#0e66bd"
+        android:background="#0ebd6b"
         android:textColor="#e3e3e3"
         android:typeface="sans" />
 
