@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProfessionalExperienceActivity" />
-        <activity android:name=".EducationActivity"></activity>
+        <activity android:name=".EducationActivity" />
+        <activity android:name=".AwardsActivity" />
+        <activity android:name=".HobbiesActivity"></activity>
     </application>
 
 </manifest>

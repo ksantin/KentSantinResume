@@ -2,7 +2,8 @@
 <ScrollView android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@+id/scrollView"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/opening_pg_gradient">
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -23,7 +24,7 @@
         android:id="@+id/myNameTextView"
         android:layout_gravity="center_horizontal"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="#ededed" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -41,9 +42,24 @@
         android:id="@+id/profExpButton"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:background="#6508fb"
+        android:background="@drawable/button1_formatting"
         android:textColor="#e3e3e3"
-        android:typeface="sans" />
+        android:typeface="sans"
+        android:drawableLeft="@drawable/briefcase_xs"
+        android:paddingLeft="15dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Honors &amp; Awards"
+        android:id="@+id/awardsButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button1_formatting"
+        android:textColor="#e3e3e3"
+        android:typeface="sans"
+        android:paddingLeft="15dp"
+        android:drawableLeft="@drawable/medal_xs" />
 
     <Button
         android:layout_width="match_parent"
@@ -52,9 +68,24 @@
         android:id="@+id/educationButton"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:background="#0ebd6b"
+        android:background="@drawable/button1_formatting"
         android:textColor="#e3e3e3"
-        android:typeface="sans" />
+        android:typeface="sans"
+        android:paddingLeft="15dp"
+        android:drawableLeft="@drawable/mortarboard_x" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hobbiesButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button1_formatting"
+        android:textColor="#e3e3e3"
+        android:typeface="sans"
+        android:text="What I do for fun"
+        android:paddingLeft="15dp"
+        android:drawableLeft="@drawable/bicycle_xs" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -70,10 +101,11 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:layout_weight="0.5"
-            android:background="#6aba24"
             android:layout_marginRight="10dp"
             android:typeface="sans"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:backgroundTint="#6aba24"
+            android:background="@drawable/button2_formatting" />
 
         <Button
             android:layout_width="0dp"
@@ -83,12 +115,12 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:layout_weight="0.5"
-            android:background="#ec3005"
             android:layout_marginLeft="10dp"
             android:typeface="sans"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:backgroundTint="#ec3005"
+            android:background="@drawable/button2_formatting" />
     </LinearLayout>
-
 
 
 </LinearLayout>

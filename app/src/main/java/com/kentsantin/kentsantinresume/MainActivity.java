@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button profExpButton;
     Button educationButton;
+    Button awardButton;
+    Button hobbiesButton;
     Button callKentButton;
     Button emailKentButton;
 
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         profExpButton = (Button) findViewById(R.id.profExpButton);
         educationButton = (Button) findViewById(R.id.educationButton);
+        awardButton = (Button) findViewById(R.id.awardsButton);
+        hobbiesButton = (Button) findViewById(R.id.hobbiesButton);
         callKentButton = (Button) findViewById(R.id.callKentButton);
         emailKentButton = (Button) findViewById(R.id.emailKentButton);
 
@@ -38,6 +42,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent moveToEduActivity = new Intent(getApplicationContext(),EducationActivity.class);
                 startActivity(moveToEduActivity);
+            }
+        });
+
+        awardButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent moveToAwardActivity = new Intent(getApplicationContext(), AwardsActivity.class);
+                startActivity(moveToAwardActivity);
+            }
+        });
+
+        hobbiesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent moveToHobbiesActivity = new Intent(getApplicationContext(), HobbiesActivity.class);
+                startActivity(moveToHobbiesActivity);
             }
         });
 

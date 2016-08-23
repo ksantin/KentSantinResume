@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/opening_pg_gradient">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,22 +22,23 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Formal Education"
         android:id="@+id/textView26"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="1"
-        android:layout_marginTop="20dp" >
+        android:layout_marginTop="20dp"
+        android:id="@+id/CUlayout">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="99dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:id="@+id/imageView2"
-            android:src="@mipmap/culogo"
-            android:layout_weight="0.88"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/cu_seal" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -45,7 +52,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Columbia University"
                 android:id="@+id/textView27"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -53,7 +61,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="M.S. Sustainability Management"
                 android:id="@+id/textView28"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -62,14 +71,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:weightSum="1"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:id="@+id/GuelphLayout">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:id="@+id/imageView3"
             android:src="@mipmap/uoglogo"
-            android:layout_weight="0.48"
             android:scaleType="centerCrop" />
 
         <LinearLayout
@@ -84,7 +93,8 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="University of Guelph"
                 android:id="@+id/textView24"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,7 +102,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="BCOMM. Accounting "
                 android:id="@+id/textView25"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -104,6 +115,126 @@
         android:text="Informal Education"
         android:id="@+id/textView29"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginTop="20dp" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Udemy Courses"
+                android:id="@+id/textView31"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Android : From Beginner to Pro"
+                android:id="@+id/textView32"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="How to Make an Android App"
+                android:id="@+id/textView30"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView4"
+            android:scaleType="centerCrop"
+            android:src="@drawable/udemy"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginTop="20dp" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Treehouse"
+                android:id="@+id/textView33"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Front End Web Development Track"
+                android:id="@+id/textView34"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Beginner Android Development"
+                android:id="@+id/textView35"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Learn Java"
+                android:id="@+id/textView36"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="JavaScript Basics"
+                android:id="@+id/textView37"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView5"
+            android:scaleType="centerCrop"
+            android:src="@drawable/treehouse"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
 
 </LinearLayout>
+    </ScrollView>
