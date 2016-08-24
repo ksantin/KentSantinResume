@@ -92,8 +92,7 @@ public class AwardsActivity extends AppCompatActivity implements AwardDetails.Aw
         Bundle detailsbundle = new Bundle();
         detailsbundle.putString(EXTRA_AWARDTITLE, awardTitle);
         detailsbundle.putString(EXTRA_AWARDDETAIL, awardDetails);
-       // AwardDetails.
-
+       pickAwardDetails.setArguments(detailsbundle);
 
 
         this.getSupportFragmentManager()
