@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Award Name"
-            android:id="@+id/awardName"
+            android:id="@+id/awardNameTB"
             android:layout_gravity="center_horizontal"
             android:textStyle="bold"
             android:layout_marginTop="20dp"/>

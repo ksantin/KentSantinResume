@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.kentsantin.kentsantinresume.R;
 
@@ -19,6 +20,8 @@ import com.kentsantin.kentsantinresume.R;
  * create an instance of this fragment.
  */
 public class AwardDetails extends Fragment {
+
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -58,7 +61,16 @@ public class AwardDetails extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
+
+        TextView awardName = (TextView) getView().findViewById(R.id.awardNameTB);
+        TextView awardDetailCoreText = (TextView)getView().findViewById(R.id.AwardDetailText);
+
+        String getAwardName = getArguments().getString("data_awardname");
+        awardName.setText(getAwardName);
+        String getAwardDetails = getArguments().getString("data_awarddetails");
+        awardDetailCoreText.setText(getAwardDetails);
     }
 
     @Override

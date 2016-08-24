@@ -19,6 +19,17 @@ public class AwardsActivity extends AppCompatActivity implements AwardDetails.Aw
     private ImageView eastregionleader;
     private ImageView employeeexcel;
 
+    public static final String EXTRA_AWARDTITLE = "EXTRATITLE";
+    public static final String EXTRA_AWARDDETAIL = "EXTRADETAIL";
+    public static final String AWARDTITLE_HENNESSEY = "XXXXX";
+    public static final String AWARDTITLE_NICOL = "XXTTT";
+    public static final String AWARDTITLE_EASTREGION = "XXBBB";
+    public static final String AWARDTITLE_EMPEXCEL = "XXXXCC";
+    public static final String AWARDDETAIL_HENNESSEY = "BBBBBBBBBBBBBBBBBBBB";
+    public static final String AWARDDETAIL_NICOL = "CCCCCCCCC";
+    public static final String AWARDDETAIL_EASTREGION = "DDDDDDDDDD";
+    public static final String AWARDDETAIL_EMPEXCEL = "EEEEEEEEEEEE";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,15 +53,66 @@ public class AwardsActivity extends AppCompatActivity implements AwardDetails.Aw
         employeeexcel = (ImageView)findViewById(R.id.empexcel);
 
 
+
+
         henessey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                loadAwardDetails(AWARDTITLE_HENNESSEY, AWARDDETAIL_HENNESSEY);
+            }
+        });
 
+        nicol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadAwardDetails(AWARDTITLE_NICOL, AWARDDETAIL_NICOL);
+            }
+        });
+
+        eastregionleader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadAwardDetails(AWARDTITLE_EASTREGION, AWARDDETAIL_EASTREGION);
+            }
+        });
+
+        employeeexcel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadAwardDetails(AWARDTITLE_EMPEXCEL, AWARDDETAIL_EMPEXCEL);
             }
         });
 
 
     }
+
+    public void loadAwardDetails(String awardTitle, String awardDetails) {
+
+        AwardDetails pickAwardDetails = new AwardDetails();
+        Bundle detailsbundle = new Bundle();
+        detailsbundle.putString(EXTRA_AWARDTITLE, awardTitle);
+        detailsbundle.putString(EXTRA_AWARDDETAIL, awardDetails);
+       // AwardDetails.
+
+
+
+        this.getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.awarddetailsfragmentcontainer, pickAwardDetails)
+                .addToBackStack(null)
+                .commit();
+
+
+
+
+
+
+
+
+
+    }
+
+
 
     public void AwardDetailListener(Uri uri) {
 
