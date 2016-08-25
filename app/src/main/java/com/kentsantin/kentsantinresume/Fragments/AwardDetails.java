@@ -29,8 +29,8 @@ public class AwardDetails extends Fragment {
     private static final String A_DETAILS = "param2";
 
     // TODO: Rename and change types of parameters
-    private String awdTitle;
-    private String awdDetails;
+    public String awdTitle = "X";
+    public String awdDetails = "Z";
 
     private AwardDetailListener mListener;
 
@@ -42,8 +42,8 @@ public class AwardDetails extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param awdTitle Parameter 1.
+     * @param awdDetails Parameter 2.
      * @return A new instance of fragment AwardDetails.
      */
     // TODO: Rename and change types and number of parameters
@@ -52,7 +52,7 @@ public class AwardDetails extends Fragment {
         Bundle args = new Bundle();
         args.putString(A_TITLE, awdTitle);
         args.putString(A_DETAILS, awdDetails);
-        fragment.setArguments();
+
         return fragment;
     }
 
@@ -60,25 +60,49 @@ public class AwardDetails extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString();
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
+
 
         }
 
-        TextView awardName = (TextView) getView().findViewById(R.id.awardNameTB);
-        TextView awardDetailCoreText = (TextView)getView().findViewById(R.id.AwardDetailText);
 
-        String getAwardName = getArguments().getString("data_awardname");
-        awardName.setText(getAwardName);
-        String getAwardDetails = getArguments().getString("data_awarddetails");
-        awardDetailCoreText.setText(getAwardDetails);
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_award_details, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_award_details, container, false);
+
+        if (getArguments() != null) {
+
+
+            awdTitle = "Award Name";
+            awdDetails = "Awd Details";
+
+        } else {
+
+
+            Bundle bundle = this.getArguments();
+
+
+            // ISSUE!? If I remove these two lines it runs...
+            awdTitle = bundle.getString("EXTRA_AWARDTITLE");
+            awdDetails = bundle.getString("EXTRA_AWARDDETAIL");
+
+        }
+
+        TextView awardName = (TextView) view.findViewById(R.id.awardNameTB);
+        TextView awardDetailCoreText = (TextView) view.findViewById(R.id.AwardDetailText);
+
+        awardName.setText(awdTitle);
+
+        awardDetailCoreText.setText(awdDetails);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

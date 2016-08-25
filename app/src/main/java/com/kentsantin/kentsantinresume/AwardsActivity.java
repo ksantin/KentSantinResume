@@ -19,8 +19,8 @@ public class AwardsActivity extends AppCompatActivity implements AwardDetails.Aw
     private ImageView eastregionleader;
     private ImageView employeeexcel;
 
-    public static final String EXTRA_AWARDTITLE = "EXTRATITLE";
-    public static final String EXTRA_AWARDDETAIL = "EXTRADETAIL";
+    public String EXTRA_AWARDTITLE = "EXTRATITLE";
+    public String EXTRA_AWARDDETAIL = "EXTRADETAIL";
     public static final String AWARDTITLE_HENNESSEY = "XXXXX";
     public static final String AWARDTITLE_NICOL = "XXTTT";
     public static final String AWARDTITLE_EASTREGION = "XXBBB";
@@ -44,13 +44,14 @@ public class AwardsActivity extends AppCompatActivity implements AwardDetails.Aw
             FragmentTransaction transaction = manager.beginTransaction();
             transaction.add(R.id.awarddetailsfragmentcontainer, fragment);
             transaction.commit();
+            loadAwardDetails("TEST", "TEST");
         }
 
 
-        henessey = (ImageView)findViewById(R.id.heny);
-        nicol = (ImageView)findViewById(R.id.nicolspaceship);
-        eastregionleader = (ImageView)findViewById(R.id.eastleader);
-        employeeexcel = (ImageView)findViewById(R.id.empexcel);
+        henessey = (ImageView) findViewById(R.id.heny);
+        nicol = (ImageView) findViewById(R.id.nicolspaceship);
+        eastregionleader = (ImageView) findViewById(R.id.eastleader);
+        employeeexcel = (ImageView) findViewById(R.id.empexcel);
 
 
 
@@ -89,10 +90,10 @@ public class AwardsActivity extends AppCompatActivity implements AwardDetails.Aw
     public void loadAwardDetails(String awardTitle, String awardDetails) {
 
         AwardDetails pickAwardDetails = new AwardDetails();
-        Bundle detailsbundle = new Bundle();
-        detailsbundle.putString(EXTRA_AWARDTITLE, awardTitle);
-        detailsbundle.putString(EXTRA_AWARDDETAIL, awardDetails);
-       pickAwardDetails.setArguments(detailsbundle);
+        Bundle bundle = new Bundle();
+        bundle.putString(EXTRA_AWARDTITLE, awardTitle);
+        bundle.putString(EXTRA_AWARDDETAIL, awardDetails);
+        pickAwardDetails.setArguments(bundle);
 
 
         this.getSupportFragmentManager()
